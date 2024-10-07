@@ -1,0 +1,43 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string nama_peminjam, judul_buku;
+    int jumlah_buku, lama_peminjaman, jumlah_buku_tersedia;
+    bool buku_tersedia;
+
+    cout << "Masukkan nama peminjam: ";
+    getline(cin, nama_peminjam);
+
+    cout << "Masukkan judul buku: ";
+    getline(cin, judul_buku);
+
+    cout << "Masukkan jumlah buku yang ingin dipinjam: ";
+    cin >> jumlah_buku;
+
+    cout << "Masukkan lama peminjaman (hari): ";
+    cin >> lama_peminjaman;
+
+    // Simulasikan pengecekan database (ganti dengan fungsi pencarian di database Anda)
+    buku_tersedia = true; // Ganti dengan logika pencarian di database Anda
+    jumlah_buku_tersedia = 10; // Ganti dengan jumlah buku yang sebenarnya di database
+
+    // Cek ketersediaan buku
+    if (buku_tersedia) {
+        if (jumlah_buku <= jumlah_buku_tersedia) {
+            cout << "Peminjaman berhasil!" << endl;
+            jumlah_buku_tersedia -= jumlah_buku;
+            // Simpan data peminjaman ke database
+            cout << "Data peminjaman telah disimpan." << endl;
+        } else {
+            cout << "Maaf, jumlah buku yang diminta melebihi stok." << endl;
+        }
+    } else {
+        cout << "Buku yang Anda cari tidak tersedia." << endl;
+    }
+
+    return 0;
+}
+Gunakan kode dengan hati-hati.
